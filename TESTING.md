@@ -45,7 +45,6 @@ FlakeSense/
 ### Quick Start - Run All Tests
 
 ```bash
-# From project root
 ./run_all_tests.sh
 ```
 
@@ -55,7 +54,6 @@ FlakeSense/
 cd backend
 ./run_tests.sh
 
-# Or manually:
 pip install -r requirements.txt
 python -m pytest --cov=app --cov-report=html
 python -m unittest discover tests/ -v
@@ -67,7 +65,6 @@ python -m unittest discover tests/ -v
 cd frontend
 ./run_tests.sh
 
-# Or manually:
 npm install
 npm test
 npm run test:coverage
@@ -156,9 +153,8 @@ npm run test:coverage
 @patch('app.random.random')
 @patch('app.random.choice')
 def test_timeout_error_classified_as_flaky(self, mock_choice, mock_random):
-    mock_random.return_value = 0.2  # Force failure
+    mock_random.return_value = 0.2  
     mock_choice.return_value = "TimeoutError"
-    # Test implementation...
 ```
 
 ### Frontend Mocking
@@ -231,7 +227,6 @@ addopts = --verbose --cov=app --cov-report=html --cov-fail-under=80
 #### Backend Tests
 
 ```bash
-# Virtual environment issues
 source .venv/bin/activate
 pip install -r requirements.txt
 

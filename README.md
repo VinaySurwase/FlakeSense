@@ -56,24 +56,19 @@ cd flakesense
 ### Backend Setup
 
 ```bash
-# Navigate to backend directory
 cd backend
 
-# Create virtual environment (recommended)
 python -m venv .venv
-source .venv/bin/activate  # On Windows: .venv\Scripts\activate
+source .venv/bin/activate  
 
-# Install dependencies
 pip install -r requirements.txt
 ```
 
 ### Frontend Setup
 
 ```bash
-# Navigate to frontend directory
 cd frontend
 
-# Install dependencies
 npm install
 ```
 
@@ -82,7 +77,6 @@ npm install
 ### Run All Tests (Recommended)
 
 ```bash
-# From project root directory
 chmod +x run_all_tests.sh
 ./run_all_tests.sh
 ```
@@ -90,10 +84,8 @@ chmod +x run_all_tests.sh
 ### Backend Tests Only
 
 ```bash
-# Navigate to backend directory
 cd backend
 
-# Run the backend test suite
 chmod +x run_tests.sh
 ./run_tests.sh
 ```
@@ -101,10 +93,8 @@ chmod +x run_tests.sh
 ### Frontend Tests Only
 
 ```bash
-# Navigate to frontend directory
 cd frontend
 
-# Run the frontend test suite
 chmod +x run_tests.sh
 ./run_tests.sh
 ```
@@ -114,27 +104,21 @@ chmod +x run_tests.sh
 **Backend Testing:**
 
 ```bash
-# Run with pytest (with coverage)
 python -m pytest --cov=. --cov-report=html
 
-# Run specific test files
 python -m pytest tests/test_api.py -v
 python -m pytest tests/test_classification.py -v
 
-# Run with unittest (fallback)
 python -m unittest discover tests/ -v
 ```
 
 **Frontend Testing:**
 
 ```bash
-# Run all tests
 npm test
 
-# Run with coverage
 npm run test:coverage
 
-# Run in CI mode
 npm run test:ci
 ```
 
@@ -267,7 +251,6 @@ jobs:
 ```bash
 cd backend
 python app.py
-# Server runs on http://localhost:5000
 ```
 
 ### Start Frontend Development Server
@@ -275,7 +258,6 @@ python app.py
 ```bash
 cd frontend
 npm start
-# Application runs on http://localhost:3000
 ```
 
 ## Contributing

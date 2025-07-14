@@ -1,0 +1,45 @@
+{
+	"version": "2.0.0",
+	"tasks": [
+		{
+			"label": "Start Backend Server",
+			"type": "shell",
+			"command": "cd backend && source venv/bin/activate && python app.py",
+			"group": "test",
+			"isBackground": true,
+			"problemMatcher": []
+		},
+		{
+			"label": "Start Frontend Server",
+			"type": "shell",
+			"command": "cd frontend && npm start",
+			"group": "test",
+			"isBackground": true,
+			"problemMatcher": []
+		},
+		{
+			"label": "Run Backend Tests",
+			"type": "shell",
+			"command": "cd backend && source venv/bin/activate && python -m pytest tests/ -v --cov=app --cov-report=html",
+			"group": "test",
+			"isBackground": false,
+			"problemMatcher": []
+		},
+		{
+			"label": "Run Frontend Tests",
+			"type": "shell",
+			"command": "cd frontend && npm test -- --coverage --watchAll=false",
+			"group": "test",
+			"isBackground": false,
+			"problemMatcher": []
+		},
+		{
+			"label": "Run All Tests",
+			"type": "shell",
+			"command": "./run_all_tests.sh",
+			"group": "test",
+			"isBackground": false,
+			"problemMatcher": []
+		}
+	]
+}
