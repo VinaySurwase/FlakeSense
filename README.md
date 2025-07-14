@@ -59,7 +59,7 @@ cd flakesense
 cd backend
 
 python -m venv .venv
-source .venv/bin/activate  
+source .venv/bin/activate
 
 pip install -r requirements.txt
 ```
@@ -274,7 +274,6 @@ This project is licensed under the MIT License - see the LICENSE file for detail
 
 ## Contact Information
 
-**Vinay Surwase**  
+**Vinay Surwase**
 
-- 📧 Email: vinaydsurwase@gmail.com
-- 🐙 GitHub: [github.com/vinaysurwase](https://github.com/VinaySurwase)
+- 📧 Email : vinaydsurwase@gmail.com
